@@ -1,7 +1,8 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/home/Home.vue';
-import Result from '../views/movieForm/Result.vue';
+import Catalog from '../views/Catalog/Catalog.vue';
+import Search from '../views/Search/Search.vue';
 
 const routes = [
   { 
@@ -9,9 +10,9 @@ const routes = [
     component: Home,
     name: "Home",
    },
-  { path: '/result', 
-    component: Result,
-    name: "Result"
+  { path: '/catalog', 
+    component: Catalog,
+    name: "Catalog"
    },
    {
      path: '/search',
