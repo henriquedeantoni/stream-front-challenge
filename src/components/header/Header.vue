@@ -6,6 +6,10 @@
 </template>
 
 <style>
+  template{
+    padding: 0;
+    margin: 0;
+  }
   header {
     background-color: #333;
     color: white;

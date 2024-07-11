@@ -1,10 +1,12 @@
-<template>
-    <div>
+  <template>
+    <div class="app-container">
       <Header />
       <div class="main-content">
         <div class="left-section">
-          <button>Acessar Catálogo</button>
-          <button>Buscar Filme</button>
+          <input>
+          <button @click="goToSearch" >Buscar Filme</button>
+          <br>
+          <button @click="goToCatalog" >Acessar Catálogo</button>
         </div>
         <div class="center-section">
           <MovieForm @movie-registered="addMovie"/>
@@ -43,12 +45,23 @@
           this.movies.shift();
         }
         this.movies.push(movie);
+      },
+      goToSearch() {
+        this.$router.push({ name: 'Search' });
+      },
+      goToCatalog() {
+        this.$router.push({ name: 'Catalog' });
       }
     }
   };
   </script>
   
   <style>
+    .app-container {
+      padding: 0;
+      margin: 0;
+    }
+
     .main-content {
       display: flex;
     }

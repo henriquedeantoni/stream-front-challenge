@@ -4,8 +4,20 @@ import Home from '../views/home/Home.vue';
 import Result from '../views/movieForm/Result.vue';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/result', component: Result }
+  { 
+    path: '/',
+    component: Home,
+    name: "Home",
+   },
+  { path: '/result', 
+    component: Result,
+    name: "Result"
+   },
+   {
+     path: '/search',
+     component: Search,
+     name: 'Search',
+   },
 ];
 
 const router = createRouter({
